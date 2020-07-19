@@ -23,5 +23,34 @@ $(document).ready(function(){
 		return false;
 	})
 
+	$('.gallery li').on('mouseenter', function(){
+		var title = $(this).children().data('title');
+		var desc = $(this).children().data('desc');
+
+		if(title == null){
+			title = '';
+		}
+
+		if(desc == null){
+			desc = 'Click to enlarge';
+		}
+
+		$(this).append('<div class="overlay"></div')
+
+		var overlay = $(this).children('.overlay')
+
+		overlay.html('<h3>'+title+'</h3><p>'+desc+'</p>')
+
+		overlay.fadeIn(800)
+	})
+
+	$('.gallery li').on('mouseleave', function(){
+		$(this).append('<div class="overlay"></div')
+
+		var overlay = $(this).children('.overlay')
+
+		overlay.fadeOut(400)
+	})
+
 })
 
