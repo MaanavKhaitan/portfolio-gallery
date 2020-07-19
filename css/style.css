@@ -98,6 +98,15 @@ section {
 	border-radius:5px;
 }
 
+footer {
+	background:#03899c;
+	color:#fff;
+	text-align: center;
+	height:55px;
+	padding-top:20px;
+	margin-top:15px;
+}
+
 @media(max-width: 768px){
 
 	#logo {
